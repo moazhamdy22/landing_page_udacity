@@ -51,12 +51,14 @@ let myObject = {
     removeActive:(section) =>{
         section.classList.remove('your-active-class');
         document.querySelector(`.${section.id}`).style.background= "";
+        section.style.cssText = "linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);";
     },
     // add the active class
     addActive:(conditional, section)=>{
         if(conditional){
             section.classList.add('your-active-class');
             document.querySelector(`.${section.id}`).style.background= "#d9534f";
+            section.style.cssText = "background-color : #292c34;";
         };
 
     },
@@ -73,24 +75,24 @@ let myObject = {
     },
     // Scroll to anchor ID using scrollTo event
     scrolling:()=>{
-        // document.querySelectorAll('a[href^="#"]').forEach(link => {
-        //     link.addEventListener('click', function (e) {
-        //         e.preventDefault();
-        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-        //             behavior: 'smooth'
-        //         });
-        //     });
-        // });
-
-        let links = document.querySelectorAll('a[href^="#"]');
-        
-        links.forEach((link) =>{
-            link.addEventListener('click',(e)=>{
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-        // link.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-    });
+
+    //     let links = document.querySelectorAll('a[href^="#"]');
+        
+    //     links.forEach((link) =>{
+    //         link.addEventListener('click',(e)=>{
+    //         e.preventDefault();
+    //         document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
+    //     });
+    //     // link.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    // });
 },
 }
 myObject.navBuilder();
