@@ -76,27 +76,8 @@ let myObject = {
 
         const links = document.querySelectorAll('.menu__link');
         links.forEach((link) =>{
-
-    //         document.getElementById('navbar__menu').addEventListener('click', function (link) {
-    //             link.preventDefault();
-    //             const target = link.target;
-    //             if (target.classList.contains('menu__link')) {
-    //                 const id = target.getAttribute('href').slice(1);
-    //                 document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    //             }
-    //         }
-    //     }
     });
-    //     //     link.addEventListener('click',()=>{
-    //     //         // for(let i = 0;i<myObject.sections.length;i++){
-    //     //         //     myObject.sections[i].document.addEventListener("click",myObject.sectionScroll(link));
-    //     //         //     console.log(myObject.sections[i])
-    //     //         // };
-    //     //         // console.log(link.getAttribute("href"));
-    //     //         document.querySelector(link.getAttribute("href")).scrollIntoView({behavior: "smooth"});
 
-    //     //     });
-    //     // });
 
 },
 
