@@ -72,11 +72,26 @@ let myObject = {
         });
     },
     // Scroll to anchor ID using scrollTo event
-    // scrolling:()=>{
+    scrolling:()=>{
+        // document.querySelectorAll('a[href^="#"]').forEach(link => {
+        //     link.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //             behavior: 'smooth'
+        //         });
+        //     });
+        // });
 
-    //     const links = document.querySelectorAll('.menu__link');
-    //     links.forEach((link) =>{
-    // });},
+        let links = document.querySelectorAll('a[href^="#"]');
+        
+        links.forEach((link) =>{
+            link.addEventListener('click',(e)=>{
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
+        });
+        // link.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    });
+},
 }
 myObject.navBuilder();
 
