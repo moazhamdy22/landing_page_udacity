@@ -72,16 +72,11 @@ let myObject = {
         });
     },
     // Scroll to anchor ID using scrollTo event
-    scrolling:()=>{
+    // scrolling:()=>{
 
-        const links = document.querySelectorAll('.menu__link');
-        links.forEach((link) =>{
-    });
-
-
-},
-
-
+    //     const links = document.querySelectorAll('.menu__link');
+    //     links.forEach((link) =>{
+    // });},
 }
 myObject.navBuilder();
 
