@@ -12,3 +12,9 @@ To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
 # landing_page_udacity
+i git help by this channel https://www.youtube.com/channel/UC51OIiCEJ1hAvJlpky5cuSA
+and i inspired by this two channels 
+1-https://www.youtube.com/c/CleverProgrammer
+2-https://www.youtube.com/c/whatsdev
+
+
