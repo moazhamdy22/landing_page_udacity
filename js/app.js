@@ -75,24 +75,24 @@ let myObject = {
     },
     // Scroll to anchor ID using scrollTo event
     scrolling:()=>{
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // document.querySelectorAll('a[href^="#"]').forEach(link => {
+        //     link.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //             behavior: 'smooth'
+        //         });
+        //     });
+        // });
 
-    //     let links = document.querySelectorAll('a[href^="#"]');
+        const links = document.querySelectorAll('a[href^="#"]');
         
-    //     links.forEach((link) =>{
-    //         link.addEventListener('click',(e)=>{
-    //         e.preventDefault();
-    //         document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
-    //     });
-    //     // link.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-    // });
+        links.forEach((link) =>{
+            link.addEventListener('click',(e)=>{
+            e.preventDefault();
+            document.querySelector(e.target.getAttribute("href")).scrollIntoView({behavior:"smooth"});
+        });
+        // link.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    });
 },
 }
 myObject.navBuilder();
