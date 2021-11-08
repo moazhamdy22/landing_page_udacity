@@ -25,56 +25,56 @@
 // my all program Object
 let myObject = {
     // navigation gloabal var
-    navigation : document.getElementById('navbar__list'),
+    x : document.getElementById('navbar__list'),
     // sections global var
-    sections : document.querySelectorAll('section'),
-    navBuilder : ()=>{
-        let navUI = '';
+    y : document.querySelectorAll('section'),
+    NB : ()=>{
+        let z = '';
         // looping over all sections
-        myObject.sections.forEach((section) => {
-            const sectionId = section.id;
-            const sectionDataNav = section.dataset.nav;
+        myObject.y.forEach((secy) => {
+            const sectionId = secy.id;
+            const sectionDataNav = secy.dataset.nav;
 
-            navUI += `<li><a class="menu__link ${sectionId}" href ="#${sectionId}">${sectionDataNav}</a></li>`;
+            z += `<li><a class="menu__link ${sectionId}" href ="#${sectionId}">${sectionDataNav}</a></li>`;
             
         });
         // append all elements to the navigation
-        myObject.navigation.innerHTML = navUI;
+        myObject.x.innerHTML = z;
 
     },
     // getting the largest value that's less or equal to the number
-    offset:(section)=>{
+    O:(secy)=>{
         // console.log(Math.floor(section.getBoundingClientRect().top));
-        return Math.floor(section.getBoundingClientRect().top);
+        return Math.floor(secy.getBoundingClientRect().top);
     },
     // remove the active class
-    removeActive:(section) =>{
-        section.classList.remove('your-active-class');
-        document.querySelector(`.${section.id}`).style.background= "";
-        section.style.cssText = "linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);";
+    RA:(secy) =>{
+        secy.classList.remove('your-active-class');
+        document.querySelector(`.${secy.id}`).style.background= "";
+        secy.style.cssText = "linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);";
     },
     // add the active class
-    addActive:(conditional, section)=>{
-        if(conditional){
-            section.classList.add('your-active-class');
-            document.querySelector(`.${section.id}`).style.background= "#d9534f";
-            section.style.cssText = "background-color : #292c34;";
+    AA:(ff, secy)=>{
+        if(ff){
+            secy.classList.add('your-active-class');
+            document.querySelector(`.${secy.id}`).style.background= "#d9534f";
+            secy.style.cssText = "background-color : #292c34;";
         };
 
     },
     //implementing the actual function
-    sectionActivation:()=>{
-        myObject.sections.forEach((section) =>{
-            const elementOffset = myObject.offset(section);
+    SHA:()=>{
+        myObject.y.forEach((secy) =>{
+            const EO = myObject.O(secy);
 
-            let inviewport = () => elementOffset <357 && elementOffset >=-150;
+            let IV = () => EO <357 && EO >=-150;
 
-            myObject.removeActive(section);
-            myObject.addActive(inviewport(),section);
+            myObject.RA(secy);
+            myObject.AA(IV(),secy);
         });
     },
     // Scroll to anchor ID using scrollTo event
-    scrolling:()=>{
+    yy:()=>{
         // document.querySelectorAll('a[href^="#"]').forEach(link => {
         //     link.addEventListener('click', function (e) {
         //         e.preventDefault();
@@ -95,11 +95,11 @@ let myObject = {
     });
 },
 }
-myObject.navBuilder();
+myObject.NB();
 
-window.addEventListener('scroll',myObject.sectionActivation);
+window.addEventListener('scroll',myObject.SHA);
 
-myObject.scrolling();
+myObject.yy();
 
 /**
  * End Global Variables
