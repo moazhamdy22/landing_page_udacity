@@ -11,6 +11,9 @@ The starter project has some HTML and CSS styling to display a static version of
 To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+
+## visit this link:
+https://moazhamdy22.github.io/landing_page_udacity/
 # landing_page_udacity
 i git help by this channel https://www.youtube.com/channel/UC51OIiCEJ1hAvJlpky5cuSA
 and i inspired by this two channels 
